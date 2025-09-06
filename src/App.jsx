@@ -222,7 +222,7 @@ function App() {
             Let's work together to create a stunning website that drives bookings and showcases your hotel's unique charm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.link/72x2tk" rel="noopener noreferrer">
+            <a href="https://wa.link/72x2tk" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 cursor-pointer">
                 Get Started Today
               </Button>
