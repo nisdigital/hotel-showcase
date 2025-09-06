@@ -16,78 +16,36 @@ function App() {
       name: "Luxury Resort Template",
       description: "Perfect for high-end resorts and luxury hotels",
       features: ["Full-screen hero images", "Booking integration", "Gallery showcase", "Amenities display"],
-      preview: {
-        title: "Azure Paradise Resort",
-        subtitle: "Escape to Luxury",
-        rating: 5,
-        location: "Maldives",
-        amenities: [
-          { icon: Wifi, label: "Free WiFi" },
-          { icon: Car, label: "Valet Parking" },
-          { icon: Waves, label: "Private Beach" },
-          { icon: Utensils, label: "Fine Dining" }
-        ],
-        heroText: "Experience unparalleled luxury in our overwater villas with stunning ocean views.",
-        primaryColor: "#001fa4",
-        accentColor: "#527dff"
-      },
       images: [
-        "/assets/luxury-resort-1.jpg",
-        "/assets/luxury-resort-2.jpg",
-        "/assets/luxury-resort-3.jpg"
-      ]
+        "/assets/Luxury_serene1.png",
+        "/assets/Luxury_serene2.png",
+        "/assets/Luxury_serene3.png"
+      ],
+      previewUrl: "https://nisdigital.github.io/Hotel-web-design/"
     },
     {
       id: 2,
       name: "Boutique Hotel Template",
       description: "Ideal for boutique hotels and unique accommodations",
       features: ["Modern minimalist design", "Local experience focus", "Social media integration", "Event booking"],
-      preview: {
-        title: "The Metropolitan",
-        subtitle: "Urban Sophistication",
-        rating: 4.8,
-        location: "Downtown",
-        amenities: [
-          { icon: Coffee, label: "Artisan Coffee" },
-          { icon: Dumbbell, label: "Fitness Center" },
-          { icon: Wifi, label: "High-Speed WiFi" },
-          { icon: Car, label: "Parking" }
-        ],
-        heroText: "Discover the perfect blend of modern comfort and timeless elegance in the heart of the city.",
-        primaryColor: "#000930",
-        accentColor: "#001fa4"
-      },
       images: [
-        "/assets/boutique-hotel-1.jpg",
-        "/assets/boutique-hotel-2.jpg",
-        "/assets/boutique-hotel-3.jpg"
-      ]
+        "/assets/Boutique_serene1.png",
+        "/assets/Boutique_serene2.png",
+        "/assets/Boutique_serene3.png"
+      ],
+      previewUrl: "https://nisdigital.github.io/Boutique-Hotel-Website/"
     },
     {
       id: 3,
       name: "Business Hotel Template",
       description: "Designed for business hotels and conference centers",
       features: ["Meeting room booking", "Business center showcase", "Corporate packages", "Event management"],
-      preview: {
-        title: "Executive Suites",
-        subtitle: "Where Business Meets Comfort",
-        rating: 4.7,
-        location: "Business District",
-        amenities: [
-          { icon: Wifi, label: "Business WiFi" },
-          { icon: Car, label: "Executive Parking" },
-          { icon: Coffee, label: "24/7 Coffee Bar" },
-          { icon: Utensils, label: "Conference Catering" }
-        ],
-        heroText: "Elevate your business travel with our premium facilities and professional services.",
-        primaryColor: "#527dff",
-        accentColor: "#001fa4"
-      },
       images: [
-        "/assets/business-hotel-1.jpg",
-        "/assets/business-hotel-2.jpg",
-        "/assets/business-hotel-3.jpg"
-      ]
+        "/assets/Business_serene1.png",
+        "/assets/Business_serene2.png",
+        "/assets/Business_serene3.png"
+      ],
+      previewUrl: "https://nisdigital.github.io/Business-Hotel-website/"
     }
   ]
 
@@ -225,7 +183,7 @@ function App() {
                     </ul>
                   </div>
                   <Button 
-                    onClick={() => setSelectedTemplate(template.id)}
+                    onClick={() => window.open(template.previewUrl, '_blank')}
                     className="w-full"
                     style={{ backgroundColor: '#001fa4' }}
                   >
