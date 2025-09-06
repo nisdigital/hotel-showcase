@@ -156,7 +156,7 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {hotelTemplates.map((template) => (
-              <Card key={template.id} className="cursor-pointer transition-all duration-300 hover:shadow-xl border-2 hover:border-blue-200">
+              <Card key={template.id} className="transition-all duration-300 hover:shadow-xl border-2 hover:border-blue-200">
                 <div className="grid grid-cols-3 gap-1 overflow-hidden rounded-t-lg">
                   {template.images.map((image, index) => (
                     <img key={index} src={image} alt={`${template.name} preview ${index + 1}`} className="w-full h-24 object-cover" />
@@ -184,7 +184,7 @@ function App() {
                   </div>
                   <Button 
                     onClick={() => window.open(template.previewUrl, '_blank')}
-                    className="w-full"
+                    className="w-full cursor-pointer"
                     style={{ backgroundColor: '#001fa4' }}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
@@ -222,10 +222,11 @@ function App() {
             Let's work together to create a stunning website that drives bookings and showcases your hotel's unique charm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              Get Started Today
-            </Button>
-
+            <a href="https://wa.link/72x2tk" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 cursor-pointer">
+                Get Started Today
+              </Button>
+            </a>
           </div>
         </div>
       </section>
