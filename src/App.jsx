@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
@@ -49,63 +50,6 @@ function App() {
     }
   ]
 
-  const TemplatePreview = ({ template }) => (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-      {/* Header */}
-      <div 
-        className="h-64 relative flex items-center justify-center text-white"
-        style={{ backgroundColor: template.preview.primaryColor }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="relative text-center z-10">
-          <h2 className="text-3xl font-bold mb-2">{template.preview.title}</h2>
-          <p className="text-lg opacity-90">{template.preview.subtitle}</p>
-          <div className="flex items-center justify-center mt-3">
-            <div className="flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <Star 
-                  key={i} 
-                  className={`w-4 h-4 ${i < Math.floor(template.preview.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
-                />
-              ))}
-              <span className="ml-2 text-sm">{template.preview.rating}</span>
-            </div>
-            <div className="flex items-center ml-4">
-              <MapPin className="w-4 h-4 mr-1" />
-              <span className="text-sm">{template.preview.location}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-6">
-        <p className="text-gray-600 mb-6">{template.preview.heroText}</p>
-        
-        {/* Amenities */}
-        <div className="mb-6">
-          <h3 className="font-semibold mb-3">Amenities</h3>
-          <div className="grid grid-cols-2 gap-3">
-            {template.preview.amenities.map((amenity, index) => (
-              <div key={index} className="flex items-center">
-                <amenity.icon className="w-4 h-4 mr-2" style={{ color: template.preview.accentColor }} />
-                <span className="text-sm">{amenity.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <Button 
-          className="w-full"
-          style={{ backgroundColor: template.preview.primaryColor }}
-        >
-          Book Now
-        </Button>
-      </div>
-    </div>
-  )
-
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -139,6 +83,7 @@ function App() {
             <Badge variant="secondary" className="text-sm px-4 py-2">SEO Optimized</Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">Mobile First</Badge>
           </div>
+          <Analytics/>
         </div>
       </section>
 
